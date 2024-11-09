@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: "Comfortaa", sans-serif;
+    background: #f9fbfb;
+    color: #090e0e;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(94, 175, 178, 0.5);
+    z-index: 1000;
+    color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Стили для .request-button */
+.header .request-button {
+    padding: 8px 20px;
+    background-color: transparent;
+    border-color: #f0f2f5;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.header .request-button:hover {
+    background-color: #508c88;
+    border: none;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.banner-content {
+    position: absolute;
+    top: 40%;
+    left: 50px;
+    color: #fff;
+    text-align: left;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.banner-content h1 {
+    font-size: 45px;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.banner-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.banner-button {
+    padding: 10px 20px;
+    background-color: #5da29d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.banner-button:hover {
+    background-color: #508c88;
+}
+
+/* Контейнер для формы входа и регистрации */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 100px;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Метки и поля ввода */
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fafafa;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #5da29d;
+    box-shadow: 0 0 8px rgba(93, 162, 157, 0.2);
+}
+
+/* Кнопка для входа и регистрации */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #5da29d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #508c88;
+    transform: translateY(-2px);
+}
+
+/* Ссылки для регистрации и входа */
+.login-link, .register-link {
+    margin-top: 20px;
+}
+
+.login-link p, .register-link p {
+    color: #555;
+}
+
+.login-link a, .register-link a {
+    color: #5da29d;
+    text-decoration: none;
+}
+
+.login-link a:hover, .register-link a:hover {
+    color: #508c88;
+    text-decoration: underline;
+}
+
+
+/* Общий стиль кнопок, исключая .request-button */
+button:not(.request-button) {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:not(.request-button):hover {
+    background-color: #0056b3;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.register-link, .login-link {
+    margin-top: 20px;
+}
+
+.profile-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 120px auto; /* Увеличиваем отступ сверху, чтобы профиль не был под хедером */
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.profile-container .profile-info {
+    margin-bottom: 15px;
+}
+
+.profile-container .profile-info strong {
+    color: #5da29d;
+}
+
+.profile-container .profile-info p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.profile-container .logout-btn {
+    width: 100%;
+    padding: 12px;
+    background-color:  #db9fb8;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.profile-container .logout-btn:hover {
+    background-color:  #aa7b8f;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .profile-container {
+        width: 90%;
+        margin-top: 100px; /* Уменьшаем отступ сверху для мобильных */
+    }
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 40px 12px 12px; /* Добавляем отступ справа для иконки */
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fafafa;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    right: 12px; /* Отступ от правого края */
+    transform: translateX(-50%); /* Центрирование иконки по вертикали */
+    color: #ccc; /* Цвет иконки */
+}
+
+.input-box input:focus {
+    border-color: #5da29d;
+    box-shadow: 0 0 8px rgba(93, 162, 157, 0.2);
+}
